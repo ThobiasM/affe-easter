@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import Answer1 from "./Answer1";
+/* import { Link } from 'react-router-dom';
+ */import Answer1 from "./Answer1";
 
 function Post1 () {
     const [postFound, setPostFound] = useState(false);
@@ -9,14 +9,13 @@ function Post1 () {
     }
 
     return(
-        <>
-            <h1>POST 1</h1>
-            <Link to='/post2'>NEXT</Link>
-            <button onClick={handlePostFound}>Post Found</button>
-
-            {postFound && <Answer1 />}
-            
-        </>
+        <div className="flexContainer">
+            <div className="flexContainerCol">
+                <h1>POST 1</h1>
+                <button onClick={handlePostFound}>Post Found</button>
+                {postFound && <Answer1 />}
+            </div>
+        </div>
     )
 }
 

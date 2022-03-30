@@ -1,11 +1,14 @@
 import React from "react";
 
-function Start () {
+function Start (props) {
     return(
-        <>
-            <h1>AFFES PÅSKEREBUS</h1>
-            <button>START</button>
-        </>
+        <div className="flexContainer">
+            <div className="flexContainerCol">
+                <h1>AFFES PÅSKEREBUS</h1>
+                <button onClick={props.handleClick}>START</button>
+            </div>
+            
+        </div>
     )
 }
 
